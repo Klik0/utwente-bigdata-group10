@@ -1,3 +1,4 @@
+# UTwente Big Data Group 10
 This source repository contains the code for the Big Data course project for the University of Twente by group 10.
 
 The University of Twente has received 66.5 million tweets about the World Cup 2014, one of the biggest sports events in the world.
