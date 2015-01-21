@@ -30,7 +30,7 @@ The following libraries are used by the Pig script:
 * udfs.jar (custom User Defined Function for Country Detection)
 * piggybank-0.12.0-chd5.2.1.jar (for storing in multiple files)
 
-## Execution
+# Execution
 The script can be executed using the following command:
 ```
 pig script.pig
