@@ -5,8 +5,36 @@ The University of Twente has received 66.5 million tweets about the World Cup 20
 
 We will analyse the Twitter user activity based on the time and country of origin of the users. We will detect peaks in activity of these users from various countries and relate these peaks to events from World Cup 2014. We will try to prove or disprove that an increased activity from users of certain countries can be monitored when their country is playing a match or see if some other important event is taking place at that time.
 
-# Installation
+The analysis of the tweets is performed by a large machine cluster owned by the University of Twente. 
 
+# Implementation
+The implementation is done using an Apache Pig script. The data is provided to us in JSON format, which is read by the Elephant Bird JSON loader. 
+
+The data is grouped by country and time period. The time periods consist of 10 minute chunks. The countries are detected using geo location (if available) or twitter's language detection.
+
+The amount of tweets per group are counted. The final output is stored in seperate files. One for each country. This should make it easier to analyse the results.
+
+# Installation
+## Required software
+The following software needs to be installed on the machine:
+* Apache Pig
+* Elephant Bird
+
+## Dependencies
+The following libraries are used by the Pig script:
+* hadoop.jar (for Elephant Bird)
+* pig.jar (for Elephant Bird)
+* json_simple-1.1.jar (for Elephant Bird)
+* udfs.jar (custom User Defined Function for Country Detection)
+* piggybank-0.12.0-chd5.2.1.jar (for storing in multiple files)
+
+## Execution
+The script can be executed using the following command:
+> pig script.pig
+or using:
+```
+pig script.pig
+```
 
 # Contributors
 Cristian Ciobotea, Nico Korthout and Martin Myslík
