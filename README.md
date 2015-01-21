@@ -8,11 +8,13 @@ We will analyse the Twitter user activity based on the time and country of origi
 The analysis of the tweets is performed by a large machine cluster owned by the University of Twente. 
 
 # Implementation
-The implementation is done using an Apache Pig script. The data is provided to us in JSON format, which is read by the Elephant Bird JSON loader. 
+The implementation is done using an Apache Pig script (i.e. script.pig). The provided data is stored on 667 seperate txt files and formatted in JSON format, which can be read by the Elephant Bird JSON loader.
 
-The data is grouped by country and time period. The time periods consist of 10 minute chunks. The countries are detected using geo location (if available) or twitter's language detection.
+The data is grouped by country and time periods. The time periods consist of 10 minute chunks. The countries are detected using geo location data (latitude, longitude) if available or twitter's language detection.
 
 The amount of tweets per group are counted. The final output is stored in seperate files. One for each country. This should make it easier to analyse the results.
+
+In our research paper we analyse the results.
 
 # Installation
 ## Required software
