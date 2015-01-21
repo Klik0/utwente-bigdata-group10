@@ -30,8 +30,6 @@ The following libraries are used by the Pig script:
 
 ## Execution
 The script can be executed using the following command:
-> pig script.pig
-or using:
 ```
 pig script.pig
 ```
