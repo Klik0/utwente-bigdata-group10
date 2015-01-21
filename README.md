@@ -29,8 +29,10 @@ The following libraries are used by the Pig script:
 * hadoop.jar (for Elephant Bird)
 * pig.jar (for Elephant Bird)
 * json_simple-1.1.jar (for Elephant Bird)
-* udfs.jar (custom User Defined Function for Country Detection)
+* udfs.jar (custom User Defined Function for country detection)
 * piggybank-0.12.0-chd5.2.1.jar (for storing in multiple files)
+
+In addition, the UDF for country detection uses the [Offline Reverse GeoCode](https://github.com/AReallyGoodName/OfflineReverseGeocode) library. This library in turn uses data from [GeoNames](http://www.geonames.org/) about geolocations of cities with a population of 15000 and more. This file can be downloaded [here](http://download.geonames.org/export/dump/cities15000.txt) and must be present on the system before execution (in the same folder as script.pig).
 
 # Execution
 The script can be executed using the following command:
