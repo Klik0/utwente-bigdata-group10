@@ -7,6 +7,8 @@ We will analyse the Twitter user activity based on the time and country of origi
 
 The analysis of the tweets is performed by a large machine cluster owned by the University of Twente. 
 
+> This repository does not contain any tweet data, we only provide a framework to handle the Twitter data!
+
 # Implementation
 The implementation is done using an Apache Pig script (i.e. script.pig). The provided data is stored on 667 seperate txt files and formatted in JSON format, which can be read by the Elephant Bird JSON loader.
 
@@ -31,6 +33,8 @@ The following libraries are used by the Pig script:
 * piggybank-0.12.0-chd5.2.1.jar (for storing in multiple files)
 
 # Execution
+> The data must be on the Hadoop file system before execution!
+
 The script can be executed using the following command:
 ```
 pig script.pig
