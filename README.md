@@ -33,7 +33,9 @@ The following libraries are used by the Pig script:
 * piggybank-0.12.0-chd5.2.1.jar (for storing in multiple files)
 
 # Execution
-> The data must be on the Hadoop file system before execution!
+> *Warning!*
+> The script points to the location of the data on our system (i.e '/user/alyr/worldcup/part*.txt'), you will have to alter this to point to the location of the data on your system.
+> In addition, the data must be on the Hadoop file system before execution!
 
 The script can be executed using the following command:
 ```
